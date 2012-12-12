@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+     * Copyright (c) 2012, Intel Corporation. All rights reserved.
+     * File revision: 15 October 2012
+     * Please see http://software.intel.com/html5/license/samples 
+     * and the included README.md file for license terms and conditions.
+    -->
+    <meta name="Copyright" content="&copy; 2012, Intel Corporation. All rights reserved." />
+
+    <!-- stylesheets -->
+    <!-- note: use jquery.mobile-1.1.1.min.css for production -->
+    <link rel="stylesheet" type="text/css" href="vendor/jquery.mobile/jquery.mobile-1.1.1.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+    <!-- scripts -->
+    <!-- note: use jquery-1.8.0.min.js & jquery.mobile-1.1.1.min.js for production -->
+    <script type="text/javascript" src="vendor/jquery/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="app/config.js"></script>
+    <script type="text/javascript" src="vendor/jquery.mobile/jquery.mobile-1.1.1.js"></script>
+    <script type="text/javascript" src="app/optionsWidget.js"></script>
+    
+    <!-- title of app -->
+    <title>Tab Navigation</title>
+    
+    <!-- mobile layout sized appropriately to viewport width and not zoomable -->	
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+
+    <!-- home page -->
+    <div data-role="page" id="home">
+    
+        <!-- header -->
+        <div data-role="header" data-id="tabnav-header" data-position="fixed" data-theme="b">
+            <h1>Tab Navigation</h1>
+        </div>
+        
+        <!-- content -->
+        <div data-role="content">           
+            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
+            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
+            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
+            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
+            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
+            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
+            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
+            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
+        </div>
+        
+        <!-- footer -->
+        <div data-role="footer" data-id="tabnav-footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn-active ui-state-persist">One</a></li>
+                    <li><a href="#page2">Two</a></li>
+                    <li><a href="#page3">Three</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div> 
+
+    <!-- page 2 -->
+    <div data-role="page" id="page2">
+    
+        <!-- header (same data-id for persistent toolbar) -->
+        <div data-role="header" data-id="tabnav-header" data-position="fixed" data-theme="b">
+            <h1>Tab Navigation</h1>
+        </div>
+        
+        <!-- content -->
+        <div data-role="content">
+            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
+            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
+            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
+            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
+            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
+            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
+            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
+            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
+        </div>
+        
+        <!-- footer -->
+        <div data-role="footer" data-id="tabnav-footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">One</a></li>
+                    <li><a href="#page2" class="ui-btn-active ui-state-persist">Two</a></li>
+                    <li><a href="#page3">Three</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- page 3 -->
+    <div data-role="page" id="page3">
+
+        <!-- header (same data-id for persistent toolbar) -->
+        <div data-role="header" data-id="tabnav-header" data-position="fixed" data-theme="b">
+            <h1>Tab Navigation</h1>
+        </div>
+        
+        <!-- content -->
+        <div data-role="content">
+            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
+            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
+            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
+            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
+            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
+            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
+            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
+            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
+        </div>
+        
+        <!-- footer -->
+        <div data-role="footer" data-id="tabnav-footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">One</a></li>
+                    <li><a href="#page2">Two</a></li>
+                    <li><a href="#page3" class="ui-btn-active ui-state-persist">Three</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- options toolbar button template (hide in unknown script tag type) -->
+    <script type="text/html" id="optionsBtnTmpl">
+        <a href="#" data-icon="gear" data-iconpos="notext" data-theme="b" class="ui-btn-right">Options</a>
+    </script>
+    
+    <!-- options menu template (hide in unknown script tag type) -->
+    <script type="text/html" id="optionsMenuTmpl">
+        <div class="optionsMenu" style="display:none"> 
+            <form action="#" method="get">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-mini="true">
+                        <input type="checkbox" name="option1" id="option1"/>
+                            <label for="option1">Option 1</label>
+                        <input type="checkbox" name="option2" id="option2"/>
+                            <label for="option2">Option 2</label>
+                        <input type="checkbox" name="option3" id="option3"/>
+                            <label for="option3">Option 3</label>
+                        <input type="checkbox" name="option4" id="option4"/>
+                            <label for="option4">Option 4</label>        
+                    </fieldset>
+                </div>
+            </form>
+        </div>    
+    </script>
+
+</body>
+
+</html>

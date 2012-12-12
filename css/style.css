@@ -1,0 +1,63 @@
+/*
+ * Copyright (c) 2012, Intel Corporation. All rights reserved.
+ * File revision: 15 October 2012
+ * Please see http://software.intel.com/html5/license/samples 
+ * and the included README.md file for license terms and conditions.
+ */
+
+
+/* custom houndstooth background */
+body {
+    background: #232323 !important;
+    background-image: url(../images/houndstooth.png) !important; 
+}
+
+/* ensure background takes up entire screen */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* override default jQuery Mobile page styling */
+.ui-page {
+    /* transparent page (to go over linen background) with white font */
+    background: none;
+    background-image: none;
+    color: white;
+
+    /* hacks to get smoother page transition, esp on older Androids */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* custom styling of options menu (position & width) */
+.optionsMenu {
+    /* custom narrow width to look like a menu */
+    width: 120px;
+    /* top right corner under options button (with 1px margin; set top dynamically) */
+    position: fixed;
+    right: 1px;
+}
+
+/* let the field container of the options menu take up the entire optionsMenuContainer */
+.optionsMenu .ui-field-contain {
+    margin: 0;
+    padding: 0; 
+}
+
+/* let the control group of the options menu take up the entire optionsMenuContainer */
+.optionsMenu .ui-controlgroup-controls {
+    width: 100%;
+}
+
+/* no rounded corners for options menu */
+.optionsMenu .ui-corner-top, .ui-corner-bottom {
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+    border-radius: 0px !important;
+}
