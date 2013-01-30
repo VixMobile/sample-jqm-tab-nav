@@ -116,6 +116,6 @@ $(document).on('pageinit', ':jqmData(role=page)', function() {
 });
 
 /* figure out page layout dynamically to set correct options menu position */
-$(document).one('pageshow', ':jqmData(role=page)', function() {
+$(document).on('pageshow', ':jqmData(role=page)', function() {
     optionsMenu.initPosition($(this));
 });

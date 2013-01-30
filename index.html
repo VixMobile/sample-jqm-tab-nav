@@ -25,39 +25,43 @@
     <title>Tab Navigation</title>
     
     <!-- mobile layout sized appropriately to viewport width and not zoomable -->	
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0">
 
 </head>
 
 <body>
-
+ 
     <!-- home page -->
-    <div data-role="page" id="home">
+    <div data-role="page" id="birds">
     
         <!-- header -->
         <div data-role="header" data-id="tabnav-header" data-position="fixed" data-theme="b">
-            <h1>Tab Navigation</h1>
+            <h1>Albums</h1>
         </div>
         
         <!-- content -->
-        <div data-role="content">           
-            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
-            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
-            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
-            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
-            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
-            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
-            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
-            Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>Page 1<br>
+        <div data-role="content" class="content_div">
+            
+            <div class="thumbnails_div" data-role="content" data-position="fixed">
+                <a href="#"><img class="thumbnail" src="images/Birds/birds1.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Birds/birds2.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Birds/birds3.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Birds/birds4.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Birds/birds5.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Birds/birds6.png" width="" height=""/></a>
+            </div>
+            <div class="mainimage_div" data-role="content" data-position="fixed">
+                <img class="mainimage" src="images/Birds/birds1.JPG" width="" height=""/>
+            </div>
         </div>
         
         <!-- footer -->
         <div data-role="footer" data-id="tabnav-footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#home" class="ui-btn-active ui-state-persist">One</a></li>
-                    <li><a href="#page2">Two</a></li>
-                    <li><a href="#page3">Three</a></li>
+                    <li><a href="#birds" data-theme="b" class="ui-btn-active">Birds</a></li>
+                    <li><a href="#flowers" data-theme="b">Flowers</a></li>
+                    <li><a href="#animals" data-theme="b">Animals</a></li>
                 </ul>
             </div>
         </div>
@@ -65,71 +69,84 @@
     </div> 
 
     <!-- page 2 -->
-    <div data-role="page" id="page2">
+    <div data-role="page" id="flowers">
     
         <!-- header (same data-id for persistent toolbar) -->
         <div data-role="header" data-id="tabnav-header" data-position="fixed" data-theme="b">
-            <h1>Tab Navigation</h1>
+            <h1>Albums</h1>
         </div>
         
-        <!-- content -->
-        <div data-role="content">
-            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
-            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
-            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
-            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
-            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
-            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
-            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
-            Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>Page 2<br>
+           <!-- content -->
+        <div data-role="content" class="content_div">
+            
+            <div class="thumbnails_div" data-role="content" data-position="fixed">
+                <a href="#"><img class="thumbnail slectedBorder" id="first" src="images/Flowers/flowers1.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Flowers/flowers2.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Flowers/flowers3.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Flowers/flowers4.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Flowers/flowers5.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Flowers/flowers6.png" width="" height=""/></a>
+            </div>
+            <div class="mainimage_div" data-role="content" data-position="fixed">
+                <img class="mainimage" src="images/Flowers/flowers1.JPG" width="" height=""/>
+            </div>
         </div>
+        
+ 
         
         <!-- footer -->
         <div data-role="footer" data-id="tabnav-footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#home">One</a></li>
-                    <li><a href="#page2" class="ui-btn-active ui-state-persist">Two</a></li>
-                    <li><a href="#page3">Three</a></li>
+                    <li><a href="#birds" data-theme="b">Birds</a></li>
+                    <li><a href="#flowers" data-theme="b" class="ui-btn-active">Flowers</a></li>
+                    <li><a href="#animals" data-theme="b">Animals</a></li>
                 </ul>
             </div>
         </div>
 
     </div>
     
-    <!-- page 3 -->
-    <div data-role="page" id="page3">
+   <!-- page 3 -->
+    <div data-role="page" id="animals">
 
         <!-- header (same data-id for persistent toolbar) -->
         <div data-role="header" data-id="tabnav-header" data-position="fixed" data-theme="b">
-            <h1>Tab Navigation</h1>
+            <h1>Albums</h1>
         </div>
         
         <!-- content -->
-        <div data-role="content">
-            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
-            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
-            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
-            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
-            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
-            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
-            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
-            Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>Page 3<br>
+        <div data-role="content" class="content_div">
+            <!-- thumbnails for all the pcitures in this album -->
+            <div class="thumbnails_div" data-role="content" data-position="fixed">
+                <a href="#"><img class="thumbnail" src="images/Animals/animals1.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Animals/animals2.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Animals/animals3.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Animals/animals4.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Animals/animals5.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Animals/animals6.png" width="" height=""/></a>
+            </div>
+            <!-- display big image for the clicked thumbnail - default to 1st image in the album -->
+            <div class="mainimage_div" data-role="content" data-position="fixed">
+                <img class="mainimage" src="images/Animals/animals1.JPG" width="" height=""/>
+            </div>
         </div>
         
+           
         <!-- footer -->
         <div data-role="footer" data-id="tabnav-footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#home">One</a></li>
-                    <li><a href="#page2">Two</a></li>
-                    <li><a href="#page3" class="ui-btn-active ui-state-persist">Three</a></li>
+                    <li><a href="#birds" data-theme="b">Birds</a></li>
+                    <li><a href="#flowers" data-theme="b">Flowers</a></li>
+                    <li><a href="#animals" data-theme="b" class="ui-btn-active">Animals</a></li>
                 </ul>
             </div>
         </div>
-
     </div>
-
+    
+    
+    
     <!-- options toolbar button template (hide in unknown script tag type) -->
     <script type="text/html" id="optionsBtnTmpl">
         <a href="#" data-icon="gear" data-iconpos="notext" data-theme="b" class="ui-btn-right">Options</a>
@@ -152,7 +169,64 @@
                     </fieldset>
                 </div>
             </form>
-        </div>    
+        </div>
+        
+    </script>
+
+    <script type="text/javascript">
+
+$(document).ready(function(){
+    // Upon clicking on thumbnail image, show the large image
+    $(".thumbnail").click(function() {
+        // change the main image source
+        var src = $(this).attr("src").match(/[^\.]+/) + ".jpg"; 
+        $(".mainimage").attr("src", src);
+        
+        //highlight the active image thumbnail(clicked image)
+        $("#first").removeClass("highlight");
+        $("#first").addClass("highlight");
+     });
+    
+    // function to resize the content area
+    function resizeContent(){
+            var headerheight = $.mobile.activePage.children('[data-role="header"]').height();
+            var footerheight = $.mobile.activePage.children('[data-role="footer"]').height();
+            var windowheight = $(window).height();
+            var windowwidth = $(window).width();
+            // available content area height
+            var content_height = windowheight - (headerheight+footerheight); 
+           
+            var full_image_div_height = content_height*0.8;
+            var thumbnails_div_height = content_height*0.2;
+     
+          $(".content_div").css('height', content_height);
+          $(".content_div").css('width', windowwidth);
+          
+    }
+    
+    $('#birds').live('pageshow',function(event, ui) {
+        // refresh main image : since we change the image src when thumbnail is clicked, this element
+        // needs to be refreshed when page is changed through tab navigation
+        $('.mainimage').attr("src", "images/birds/birds1.jpg");   
+    });
+    $('#flowers').live('pageshow',function(event, ui) {
+        // refresh main image : since we change the image src when thumbnail is clicked, this element
+        // needs to be refreshed when page is changed through tab navigation
+        $('.mainimage').attr("src", "images/flowers/flowers1.jpg");   
+    });
+    $('#animals').live('pageshow',function(event, ui) {
+        // refresh main image : since we change the image src when thumbnail is clicked, this element
+        // needs to be refreshed when page is changed through tab navigation
+        $('.mainimage').attr("src", "images/animals/animals1.jpg");   
+    });
+    
+    // bind event handler to resize the content area on orientation change
+    $(window).bind('resize orientationchange pageshow', function(event){
+        window.scrollTo(1,0);
+        resizeContent();
+    });
+    
+});
     </script>
 
 </body>

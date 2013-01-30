@@ -18,4 +18,3 @@ $(document).on('pageinit', ':jqmData(role=page)', function() {
     $(this).find(':jqmData(role=header)').fixedtoolbar( { tapToggle: false } ); 
     $(this).find(':jqmData(role=footer)').fixedtoolbar( { tapToggle: false } );     
 });
-
