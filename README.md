@@ -2,6 +2,11 @@ This sample is a multi-page jQuery Mobile scaffold using tab-based navigation.
 It also demonstrates how to create a custom options menu widget that maintains 
 state across page transitions, and how to dynamically inject widgets into the DOM.
 
+Intel® HTML5 Development Environment Beta
+This sample is part of the Intel® HTML5 Development Environment tool. 
+Please sign up the beta at http://software.intel.com/en-us/html5.
+To see the technical detail of the sample, please visit the sample article page at 
+http://software.intel.com/en-us/articles/media-sample-using-phonegap. 
 
 License Information Follows
 ---------------------------
@@ -9,9 +14,11 @@ License Information Follows
 * css/style.css
 * app/optionsWidget.js
 * app/config.js
-* images/houndstooth.png
+* images/Animals/*.png
+* images/Birds/*.png
+* images/Flowers/*.png
 * config.xml
-* sample_icon_72x72.png
+* icon.png
 * abstract.txt
 * app.json
 * screenshot.png
