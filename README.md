@@ -4,9 +4,10 @@ state across page transitions, and how to dynamically inject widgets into the DO
 
 Intel® HTML5 Development Environment Beta
 This sample is part of the Intel® HTML5 Development Environment tool. 
-Please sign up the beta at http://software.intel.com/en-us/html5.
+Please sign up for the beta at http://software.intel.com/en-us/html5.
 To see the technical detail of the sample, please visit the sample article page at 
-http://software.intel.com/en-us/articles/media-sample-using-phonegap. 
+http://software.intel.com/en-us/articles/jquery-mobile-tab-navigation
+
 
 License Information Follows
 ---------------------------
@@ -14,6 +15,7 @@ License Information Follows
 * css/style.css
 * app/optionsWidget.js
 * app/config.js
+* app/tabbedimages.js
 * images/Animals/*.png
 * images/Birds/*.png
 * images/Flowers/*.png

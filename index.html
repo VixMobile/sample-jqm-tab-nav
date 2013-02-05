@@ -19,13 +19,14 @@
     <script type="text/javascript" src="vendor/jquery/jquery-1.8.0.js"></script>
     <script type="text/javascript" src="app/config.js"></script>
     <script type="text/javascript" src="vendor/jquery.mobile/jquery.mobile-1.1.1.js"></script>
+    <script type="text/javascript" src="app/tabbedimages.js"></script>
     <script type="text/javascript" src="app/optionsWidget.js"></script>
     
     <!-- title of app -->
     <title>Tab Navigation</title>
     
-    <!-- mobile layout sized appropriately to viewport width and not zoomable -->	
-    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0">
+    <!-- mobile layout sized appropriately to viewport width and not zoomable -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
 </head>
 
@@ -51,7 +52,7 @@
                 <a href="#"><img class="thumbnail" src="images/Birds/birds6.png" width="" height=""/></a>
             </div>
             <div class="mainimage_div" data-role="content" data-position="fixed">
-                <img class="mainimage" src="images/Birds/birds1.JPG" width="" height=""/>
+                <img class="mainimage" src="images/Birds/birds1.jpg" width="" height=""/>
             </div>
         </div>
         
@@ -59,7 +60,7 @@
         <div data-role="footer" data-id="tabnav-footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#birds" data-theme="b" class="ui-btn-active">Birds</a></li>
+                    <li><a href="#birds" data-theme="b" class="ui-btn-active ui-state-persist">Birds</a></li>
                     <li><a href="#flowers" data-theme="b">Flowers</a></li>
                     <li><a href="#animals" data-theme="b">Animals</a></li>
                 </ul>
@@ -88,7 +89,7 @@
                 <a href="#"><img class="thumbnail" src="images/Flowers/flowers6.png" width="" height=""/></a>
             </div>
             <div class="mainimage_div" data-role="content" data-position="fixed">
-                <img class="mainimage" src="images/Flowers/flowers1.JPG" width="" height=""/>
+                <img class="mainimage" src="images/Flowers/flowers1.jpg" width="" height=""/>
             </div>
         </div>
         
@@ -99,7 +100,7 @@
             <div data-role="navbar">
                 <ul>
                     <li><a href="#birds" data-theme="b">Birds</a></li>
-                    <li><a href="#flowers" data-theme="b" class="ui-btn-active">Flowers</a></li>
+                    <li><a href="#flowers" data-theme="b" class="ui-btn-active ui-state-persist">Flowers</a></li>
                     <li><a href="#animals" data-theme="b">Animals</a></li>
                 </ul>
             </div>
@@ -128,7 +129,7 @@
             </div>
             <!-- display big image for the clicked thumbnail - default to 1st image in the album -->
             <div class="mainimage_div" data-role="content" data-position="fixed">
-                <img class="mainimage" src="images/Animals/animals1.JPG" width="" height=""/>
+                <img class="mainimage" src="images/Animals/Animals1.jpg" width="" height=""/>
             </div>
         </div>
         
@@ -139,7 +140,7 @@
                 <ul>
                     <li><a href="#birds" data-theme="b">Birds</a></li>
                     <li><a href="#flowers" data-theme="b">Flowers</a></li>
-                    <li><a href="#animals" data-theme="b" class="ui-btn-active">Animals</a></li>
+                    <li><a href="#animals" data-theme="b" class="ui-btn-active ui-state-persist">Animals</a></li>
                 </ul>
             </div>
         </div>
@@ -155,17 +156,18 @@
     <!-- options menu template (hide in unknown script tag type) -->
     <script type="text/html" id="optionsMenuTmpl">
         <div class="optionsMenu" style="display:none"> 
-            <form action="#" method="get">
+            <form id="myform" action="#" method="get">
                 <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup" data-mini="true">
-                        <input type="checkbox" name="option1" id="option1"/>
-                            <label for="option1">Option 1</label>
-                        <input type="checkbox" name="option2" id="option2"/>
-                            <label for="option2">Option 2</label>
-                        <input type="checkbox" name="option3" id="option3"/>
-                            <label for="option3">Option 3</label>
-                        <input type="checkbox" name="option4" id="option4"/>
-                            <label for="option4">Option 4</label>        
+                    <fieldset data-role="controlgroup" style="background: #CCCCCC; color: black;" data-mini="true">
+                        Background:
+                        <input type="radio" name="optionsname" id="option1"/>
+                            <label for="option1" style="background: #000000; color:white">Black</label>
+                        <input type="radio" name="optionsname" id="option2"/>
+                            <label for="option2" style="background: #C74277; color:white">Red</label>
+                        <input type="radio" name="optionsname" id="option3"/>
+                            <label for="option3" style="background: #70804E; color:white">Green</label>
+                        <input type="radio" name="optionsname" id="option4"/>
+                            <label for="option4" style="background: #6598E0; color:white">Blue</label>        
                     </fieldset>
                 </div>
             </form>
@@ -174,59 +176,9 @@
     </script>
 
     <script type="text/javascript">
-
-$(document).ready(function(){
-    // Upon clicking on thumbnail image, show the large image
-    $(".thumbnail").click(function() {
-        // change the main image source
-        var src = $(this).attr("src").match(/[^\.]+/) + ".jpg"; 
-        $(".mainimage").attr("src", src);
-        
-        //highlight the active image thumbnail(clicked image)
-        $("#first").removeClass("highlight");
-        $("#first").addClass("highlight");
-     });
-    
-    // function to resize the content area
-    function resizeContent(){
-            var headerheight = $.mobile.activePage.children('[data-role="header"]').height();
-            var footerheight = $.mobile.activePage.children('[data-role="footer"]').height();
-            var windowheight = $(window).height();
-            var windowwidth = $(window).width();
-            // available content area height
-            var content_height = windowheight - (headerheight+footerheight); 
-           
-            var full_image_div_height = content_height*0.8;
-            var thumbnails_div_height = content_height*0.2;
-     
-          $(".content_div").css('height', content_height);
-          $(".content_div").css('width', windowwidth);
-          
-    }
-    
-    $('#birds').live('pageshow',function(event, ui) {
-        // refresh main image : since we change the image src when thumbnail is clicked, this element
-        // needs to be refreshed when page is changed through tab navigation
-        $('.mainimage').attr("src", "images/birds/birds1.jpg");   
-    });
-    $('#flowers').live('pageshow',function(event, ui) {
-        // refresh main image : since we change the image src when thumbnail is clicked, this element
-        // needs to be refreshed when page is changed through tab navigation
-        $('.mainimage').attr("src", "images/flowers/flowers1.jpg");   
-    });
-    $('#animals').live('pageshow',function(event, ui) {
-        // refresh main image : since we change the image src when thumbnail is clicked, this element
-        // needs to be refreshed when page is changed through tab navigation
-        $('.mainimage').attr("src", "images/animals/animals1.jpg");   
-    });
-    
-    // bind event handler to resize the content area on orientation change
-    $(window).bind('resize orientationchange pageshow', function(event){
-        window.scrollTo(1,0);
-        resizeContent();
-    });
-    
-});
+        $("#birds").die("pageinit");
+        $("#flowers").die("pageinit");
+        $("#animals").die("pageinit"); 
     </script>
 
 </body>
