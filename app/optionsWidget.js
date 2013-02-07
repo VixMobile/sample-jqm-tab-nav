@@ -24,14 +24,16 @@ var optionsBtn = {
 var optionsMenu = {
     
     /* state of the four options to be synched across page transitions */
-    options: [false, false, false, false],
-    
+    options: [false, false, false, false, false, false, false, false, false, false, false, false],
+    /* background color for the page, settable by the options widget */
+    bgcolor: ['#000000', '#C74277', '#70804E', '#6598E0','#000000', '#C74277', '#70804E', '#6598E0','#000000', '#C74277', '#70804E', '#6598E0'],
+    /* index for the background color to be saved across the pages */
+    color_pos: 0,
     /* vertical position of menu */
     top: 0,
     
     /* create & initialize the options menu for given page */
     init: function($page) {
-        
         /* insert & initialize options menu */
         $($('#optionsMenuTmpl').html())
             /* insert into dom */
@@ -48,7 +50,15 @@ var optionsMenu = {
         $page.on('pagebeforeshow', function() {
             optionsMenu.resume($(this));
         });
-        
+        /* Upon radio button click, change the background color */
+        $page.on('change', function(){
+            var index = 0;
+            $(this).find('input[type=radio]').each(function(){
+                if($(this).is(':checked')) optionsMenu.color_pos=index;
+                index++;              
+            });
+            $page.find(':jqmData(role=content)').css('background', optionsMenu.bgcolor[optionsMenu.color_pos]);
+        });
     },
     
     /* calculate vertical position of menu */
@@ -72,7 +82,9 @@ var optionsMenu = {
         var $el = $page.find('.optionsMenu');
         $el.hide();
         optionsMenu.reconcileState($el);
+        $page.find(':jqmData(role=content)').css('background', optionsMenu.bgcolor[optionsMenu.color_pos]);
         $el.on('toggleOptionsMenu', optionsMenu.toggle);
+        
     },
     
     /* save state of options */
@@ -80,7 +92,9 @@ var optionsMenu = {
         $optionsMenu.find('input')
             .each(function(index) {
                 optionsMenu.options[index] = $(this).is(':checked');                    
+                
             });
+            
     },
     
     /* update options with latest state */
@@ -88,6 +102,7 @@ var optionsMenu = {
         $optionsMenu.find('input')
             .each(function(index) {
                 /* draw check marks for selected options */
+            
                 if (optionsMenu.options[index]) {
                     $(this).attr('checked', true).checkboxradio('refresh');
                 } 
