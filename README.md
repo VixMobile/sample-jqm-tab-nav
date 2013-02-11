@@ -6,7 +6,8 @@ Intel® HTML5 Development Environment Beta
 This sample is part of the Intel® HTML5 Development Environment tool. 
 Please sign up for the beta at http://software.intel.com/en-us/html5.
 To see the technical detail of the sample, please visit the sample article page at 
-http://software.intel.com/en-us/articles/jquery-mobile-tab-navigation. 
+http://software.intel.com/en-us/articles/jquery-mobile-tab-navigation
+
 
 License Information Follows
 ---------------------------
