@@ -5,5 +5,5 @@
 	"description":"A multi-page jQuery Mobile scaffold using tab-based navigation. It also demonstrates how to create a custom options menu widget that maintains state across page transitions; and how to dynamically inject widgets into the DOM.",
 	"articleurl":"http://software.intel.com/en-us/articles/jquery-mobile-tab-navigation",
 	"categories":["jQuery","jQuery Mobile"],
-	"visible" : "true"
+	"visible" : "false"
 }
