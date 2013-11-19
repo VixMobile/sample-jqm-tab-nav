@@ -1,10 +1,13 @@
+jQuery Mobile Tab Nav
+-----------------------------
 This sample is a multi-page jQuery Mobile scaffold using tab-based navigation.
 It also demonstrates how to create a custom options menu widget that maintains 
 state across page transitions, and how to dynamically inject widgets into the DOM.
 
-Intel® HTML5 Development Environment Beta
-This sample is part of the Intel® HTML5 Development Environment tool. 
-Please sign up for the beta at http://software.intel.com/en-us/html5.
+Intel(R) XDK
+-----------------------------
+This sample is part of the Intel(R) XDK tool. 
+Please sign up at http://software.intel.com/en-us/html5.
 To see the technical detail of the sample, please visit the sample article page at 
 http://software.intel.com/en-us/articles/jquery-mobile-tab-navigation
 
@@ -74,3 +77,9 @@ Copyright (c) 2012, jQuery Foundation and other contributors.
 * source:  http://jquery.com/
 * source:  http://jquerymobile.com/
 * license: http://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
+
+IMAGES: *.png; images/*.png
+----------------------------------------------------------------------------
+all images are created by Intel Corp.
+they are licensed under the Creative Commons Attribution 3.0 license
+http://creativecommons.org/licenses/by/3.0/us/
