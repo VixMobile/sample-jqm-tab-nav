@@ -1,4 +1,5 @@
-
+/*jslint browser:true, devel:true, white:true, vars:true, eqeq:true */
+/*global $:false, intel:false, orientation:false*/
 $(document).ready(function(){
     // Upon clicking on thumbnail image, show the large image
     $(".thumbnail").click(function() {
@@ -29,7 +30,7 @@ $(document).ready(function(){
         $(".thumbnails_div").css('top', (full_image_div_height + 37));
         $(".mainimage_div").css('height', full_image_div_height);
         if(typeof window.onorientationchange != 'undefined'){
-            if( orientation == 0 || orientation == 180){
+            if( orientation === 0 || orientation == 180){
                 $(".thumbnail").css('width', windowwidth/6);
             } else{
                 $(".thumbnail").css('width', "12%");

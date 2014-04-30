@@ -1,3 +1,5 @@
+/*jslint browser:true, devel:true, white:true, vars:true, eqeq:true */
+/*global $:false, intel:false*/
 /*
  * Copyright (c) 2012, Intel Corporation. All rights reserved.
  * File revision: 15 October 2012
@@ -41,7 +43,7 @@ var optionsMenu = {
             /* set vertical position */
             .css('top', optionsMenu.top)
             /* get jQuery Mobile to process widget */
-            .trigger('create')
+            .trigger('create');
             
         /* maintain state across page transitions */
         $page.on('pagebeforehide', function() {

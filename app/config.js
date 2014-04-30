@@ -1,3 +1,5 @@
+/*jslint browser:true, devel:true, white:true, vars:true, eqeq:true */
+/*global $:false*/
 /*
  * Copyright (c) 2012, Intel Corporation. All rights reserved.
  * File revision: 15 October 2012
