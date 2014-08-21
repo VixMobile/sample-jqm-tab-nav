@@ -1,0 +1,128 @@
+/*
+ * Copyright (c) 2012, Intel Corporation. All rights reserved.
+ * File revision: 15 October 2012
+ * Please see http://software.intel.com/html5/license/samples 
+ * and the included README.md file for license terms and conditions.
+ */
+
+
+body {
+ /*   background: #232323 !important;*/
+background: #b4e391; /* Old browsers */
+background: -moz-linear-gradient(top,  #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4e391), color-stop(50%,#61c419), color-stop(100%,#b4e391)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%) !important; /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* W3C */
+}
+
+/* ensure background takes up entire screen */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.content_div{
+     position: fixed;
+     width: 100%;
+     padding: 0px !important;
+     margin: 0px !important;
+ 
+}
+
+.mainimage_div{
+    position: fixed;
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 100%;
+    top: 36px;
+ 
+  /*  height: 80%;
+    width: 95%;*/
+}
+
+.thumbnails_div{
+    position: fixed;
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 100%;
+/* padding-bottom: 36px; */
+
+ 
+}
+
+.mainimage{ 
+    max-width: 100%;
+    max-height: 100%;
+  /*  top-margin: -30px;*/
+  padding: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+    margin-left: auto;
+    margin-right: auto; 
+  
+    
+    display: block;
+}
+
+.thumbnail:hover{ opacity: 0.7; }
+.thumbnail:active { opacity: 0.7;}
+
+.thumbnail {
+    max-height: 100%;
+    max-width: 15%;
+  /*  min-width: 46px;*/
+    width: 12%;
+
+}
+.highlight{
+   opacity: 0.5;
+}
+
+/* override default jQuery Mobile page styling */
+.ui-page {
+    /* transparent page (to go over linen background) with white font */
+    background: none;
+    background-image: none;
+    color: white;
+
+    /* hacks to get smoother page transition, esp on older Androids */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* custom styling of options menu (position & width) */
+.optionsMenu {
+    /* custom narrow width to look like a menu */
+    width: 120px;
+    /* top right corner under options button (with 1px margin; set top dynamically) */
+    position: fixed;
+    right: 1px;
+}
+
+/* let the field container of the options menu take up the entire optionsMenuContainer */
+.optionsMenu .ui-field-contain {
+    margin: 0;
+    padding: 0; 
+}
+
+/* let the control group of the options menu take up the entire optionsMenuContainer */
+.optionsMenu .ui-controlgroup-controls {
+    width: 100%;
+}
+
+/* no rounded corners for options menu */
+.optionsMenu .ui-corner-top, .ui-corner-bottom {
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+    border-radius: 0px !important;
+}
