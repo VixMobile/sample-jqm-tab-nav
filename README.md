@@ -1,31 +1,35 @@
-Yoga Positions
-============================
-The Yoga Positions App is a simple multi-page app using the App Framework UI Library that was 
-developed with the App Starter Tool, a UI drag & drop Builder within the Intel(R)
-XDK.
+jQuery Mobile Tab Nav
+-----------------------------
+This sample is a multi-page jQuery Mobile scaffold using tab-based navigation.
+It also demonstrates how to create a custom options menu widget that maintains 
+state across page transitions, and how to dynamically inject widgets into the DOM.
 
-Intel(R) XDK 
--------------------------------------------
-This sample is part of the Intel(R) XDK. 
-Download the Intel(R) XDK at http://software.intel.com/en-us/html5. To see the 
-technical details of the sample, please visit the sample article page at _TBD_.
+Intel(R) XDK
+-----------------------------
+This sample is part of the Intel(R) XDK tool. 
+Please sign up at http://software.intel.com/en-us/html5.
+To see the technical detail of the sample, please visit the sample article page at 
+http://software.intel.com/en-us/articles/jquery-mobile-tab-navigation
 
-
-Important App Files
----------------------------
-* index.html
-* icon.png
-* screenshot.png
-* app.json
-* README.md
-* js/*
-* plugins/*
-* css/*
-* images/*
 
 License Information Follows
 ---------------------------
-Copyright (c) 2013, Intel Corporation. All rights reserved.
+* index.html
+* css/style.css
+* app/optionsWidget.js
+* app/config.js
+* app/tabbedimages.js
+* images/Animals/*.png
+* images/Birds/*.png
+* images/Flowers/*.png
+* config.xml
+* icon.png
+* abstract.txt
+* app.json
+* screenshot.png
+* README.md
+
+Copyright (c) 2012, Intel Corporation
 
 Redistribution and use in source and binary forms, with or without modification, 
 are permitted provided that the following conditions are met:
@@ -53,17 +57,29 @@ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
 OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-IMAGES
------------------------------------------------------------------------------
-* source: http://pixabay.com/
-* source: http://pixabay.com/en/enlightenment-buddhist-monk-154910/
-* source: http://pixabay.com/en/yoga-exercise-position-stretch-37267/
-* source: http://pixabay.com/en/man-sport-yoga-person-gymnast-37264/
-* source: http://pixabay.com/en/man-figure-yoga-person-sports-37262/ 
-* source: http://pixabay.com/en/figure-sport-person-gymnast-37268/
-* license: http://creativecommons.org/publicdomain/zero/1.0/
+jQuery and jQuery Mobile
+------------------------
+* vendor/jquery/jquery-1.8.0.js
+* vendor/jquery/jquery-1.8.0.min.js
+* vendor/jquery.mobile/jquery.mobile-1.1.1.js
+* vendor/jquery.mobile/jquery.mobile-1.1.1.min.js 
+* vendor/jquery.mobile/jquery.mobile-1.1.1.css
+* vendor/jquery.mobile/jquery.mobile-1.1.1.min.css
+* vendor/jquery.mobile/images/ajax-loader.gif
+* vendor/jquery.mobile/images/ajax-loader.png
+* vendor/jquery.mobile/images/icons-18-black.png
+* vendor/jquery.mobile/images/icons-18-white.png
+* vendor/jquery.mobile/images/icons-36-black.png
+* vendor/jquery.mobile/images/icons-36-white.png
 
-App Framework (formerly jQ.Mobi)
------------------------------------------------------------------------------
-* source:  https://github.com/01org/appframework
-* license: https://github.com/01org/appframework/blob/master/license.txt
+Copyright (c) 2012, jQuery Foundation and other contributors.
+
+* source:  http://jquery.com/
+* source:  http://jquerymobile.com/
+* license: http://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
+
+IMAGES: *.png; images/*.png
+----------------------------------------------------------------------------
+all images are created by Intel Corp.
+they are licensed under the Creative Commons Attribution 3.0 license
+http://creativecommons.org/licenses/by/3.0/us/

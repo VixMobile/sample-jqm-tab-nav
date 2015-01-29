@@ -1,169 +1,199 @@
 <!DOCTYPE html>
-<html><!--HTML5 doctype-->
-
+<html>
 <head>
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta http-equiv="Pragma" content="no-cache">
-<script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
-<script src="cordova.js"></script>
-<script src="xhr.js"></script>
-<script type="text/javascript" language="javascript">
-    // This event handler is fired once the intel libraries are ready
-    function onDeviceReady() {
-        //hide splash screen now that our app is ready to run
-        if( window.Cordova && navigator.splashscreen ) {     // Cordova API detected
-            navigator.splashscreen.hide() ;                 // hide splash screen
-        }
-        setTimeout(function () {
-            $.ui.launch();
-        }, 50);
-    }
-    //initial event handler to detect when intel is ready to roll
-    document.addEventListener("deviceready", onDeviceReady, false);
-</script>
-<script src="js/appframework.ui.min.js"></script>
-<script>
-    $.ui.autoLaunch = false;
-    $.ui.useOSThemes = true; //Change this to false to force a device theme
-    $.ui.blockPageScroll();
-    $(document).ready(function () {
-        if ($.ui.useOSThemes && !$.os.ios && $("#afui").get(0).className !== "ios")
-            $("#afui").removeClass("ios");
-    });
-</script>
-<link href="css/icons.css" rel="stylesheet" type="text/css">
-<link href="css/af.ui.css" rel="stylesheet" type="text/css">
+    <!--
+     * Copyright (c) 2012, Intel Corporation. All rights reserved.
+     * File revision: 15 October 2012
+     * Please see http://software.intel.com/html5/license/samples 
+     * and the included README.md file for license terms and conditions.
+    -->
+    <meta name="Copyright" content="&copy; 2012, Intel Corporation. All rights reserved." />
+
+    <!-- stylesheets -->
+    <!-- note: use jquery.mobile-1.1.1.min.css for production -->
+    <link rel="stylesheet" type="text/css" href="vendor/jquery.mobile/jquery.mobile-1.1.1.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+    <!-- scripts -->
+    <!-- note: use jquery-1.8.0.min.js & jquery.mobile-1.1.1.min.js for production -->
+    <script type="text/javascript" src="vendor/jquery/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="app/config.js"></script>
+    <script type="text/javascript" src="vendor/jquery.mobile/jquery.mobile-1.1.1.js"></script>
+    <script type="text/javascript" src="app/tabbedimages.js"></script>
+    <script type="text/javascript" src="app/optionsWidget.js"></script>
+    <script src="corodova.js"></script>
+    <script src="intelxdk.js"></script>
+    <script src="xhr.js"></script>
+    
+    <script type="text/javascript">
+        var onDeviceReady=function(){
+            if( window.Cordova && navigator.splashscreen ) {     // Cordova API detected
+                navigator.splashscreen.hide() ;                 // hide splash screen
+            }
+        };
+        document.addEventListener("deviceready", onDeviceReady, false) ;
+    </script>
+
+    
+    <!-- title of app -->
+    <title>Tab Navigation</title>
+    
+    <!-- mobile layout sized appropriately to viewport width and not zoomable -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
 </head>
 
-<div id="afui" class="ios">
-    <div id="header" class="header"></div>
-    <div id="content" style="">
-        <div class="panel" title="Home" id="home" selected="selected" style="" data-appbuilder-object="page"
-        data-header="header_0">
-
-
-            <div class="grid" data-appbuilder-object="grid3" style="z-index: 0;">
-
-
-
-            </div>
-            <div class="container" style="width: 100%; height: 100%; position: relative; z-index: 0;"
-            data-appbuilder-object="container">
-                <img src="images/enlightenment-154910.svg" style="width: 100%; height: 80%;" alt="Title"
-                data-appbuilder-object="image" class="" title="Yoga App">
-                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">Welcome!</div>
-            </div>
+<body>
+ 
+    <!-- home page -->
+    <div data-role="page" id="birds">
+    
+        <!-- header -->
+        <div data-role="header" data-id="tabnav-header" data-position="fixed" data-theme="b">
+            <h1>Albums</h1>
         </div>
-        <div class="panel" title="Position 1" id="page_1" data-appbuilder-object="page"
-        data-footer="footer_1" data-header="header_0" style="">
-
-            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
-                <img src="images/figure-37266.svg" style="width: 100%; height: 80%;" alt="Title"
-                data-appbuilder-object="image" class="" title="">
-                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">Position 1:
-                    <br>Reach down and touch your toes.</div>
+        
+        <!-- content -->
+        <div data-role="content" class="content_div">
+            
+            <div class="thumbnails_div" data-role="content" data-position="fixed">
+                <a href="#"><img class="thumbnail" src="images/Birds/birds1.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Birds/birds2.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Birds/birds3.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Birds/birds4.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Birds/birds5.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Birds/birds6.png" width="" height=""/></a>
+            </div>
+            <div class="mainimage_div" data-role="content" data-position="fixed">
+                <img class="mainimage" src="images/Birds/birds1.jpg" width="" height=""/>
             </div>
         </div>
-        <div class="panel" title="Position 2" id="page_2" data-appbuilder-object="page"
-        style="" data-footer="footer_2" data-header="header_0">
-
-            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
-                <img src="images/figure-37268.svg" style="width: 100%; height: 80%;" alt="Title"
-                data-appbuilder-object="image" class="" title="">
-                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">Position 2:
-                    <br>Lay down face first and reach with your hands.</div>
+        
+        <!-- footer -->
+        <div data-role="footer" data-id="tabnav-footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#birds" data-theme="b" class="ui-btn-active ui-state-persist">Birds</a></li>
+                    <li><a href="#flowers" data-theme="b">Flowers</a></li>
+                    <li><a href="#animals" data-theme="b">Animals</a></li>
+                </ul>
             </div>
         </div>
-        <div class="panel" title="Position 3" data-footer="footer_3" id="page_3" data-appbuilder-object="page"
-        style="" data-header="header_0">
+        
+    </div> 
 
-            <div class="container" style="width: 100%; height: 100%; position: relative; z-index: 0;"
-            data-appbuilder-object="container">
-                <img src="images/man-37262.svg" style="width: 100%; height: 80%;" alt="Title" data-appbuilder-object="image"
-                class="" title="">
-                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">Position 3:
-                    <br>Lie on your back and use your arms to help arch your back.</div>
+    <!-- page 2 -->
+    <div data-role="page" id="flowers">
+    
+        <!-- header (same data-id for persistent toolbar) -->
+        <div data-role="header" data-id="tabnav-header" data-position="fixed" data-theme="b">
+            <h1>Albums</h1>
+        </div>
+        
+           <!-- content -->
+        <div data-role="content" class="content_div">
+            
+            <div class="thumbnails_div" data-role="content" data-position="fixed">
+                <a href="#"><img class="thumbnail slectedBorder" id="first" src="images/Flowers/flowers1.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Flowers/flowers2.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Flowers/flowers3.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Flowers/flowers4.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Flowers/flowers5.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Flowers/flowers6.png" width="" height=""/></a>
+            </div>
+            <div class="mainimage_div" data-role="content" data-position="fixed">
+                <img class="mainimage" src="images/Flowers/flowers1.jpg" width="" height=""/>
+            </div>
+        </div>
+        
+ 
+        
+        <!-- footer -->
+        <div data-role="footer" data-id="tabnav-footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#birds" data-theme="b">Birds</a></li>
+                    <li><a href="#flowers" data-theme="b" class="ui-btn-active ui-state-persist">Flowers</a></li>
+                    <li><a href="#animals" data-theme="b">Animals</a></li>
+                </ul>
             </div>
         </div>
 
+    </div>
+    
+   <!-- page 3 -->
+    <div data-role="page" id="animals">
 
-
-
-
-        <div class="panel" title="About" id="page_10" data-appbuilder-object="page" style=""
-        data-header="header_0">
-
-
-            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
-                <img src="images/enlightenment-154910.svg" style="width: 100%; height: 40%;" alt="Title"
-                data-appbuilder-object="image" class="" title="">
-                <div class="text_item" data-appbuilder-object="text">Yoga is very healthy for you. You should try to do yoga every day.
-                    Try to focus on your breathing and with each movement breath
-                    in, and then breath out with the next movement. Try to breath
-                    down into your belly. Take it slow and never force your body.
-                    Let the energy flow through the top of your head to your feet
-                    grounded on the yoga mat. If you do yoga every day, you will
-                    be more flexible and live a long and fulfilling life.
-                    <br>
-                    <br>~ Namaste ~</div>
+        <!-- header (same data-id for persistent toolbar) -->
+        <div data-role="header" data-id="tabnav-header" data-position="fixed" data-theme="b">
+            <h1>Albums</h1>
+        </div>
+        
+        <!-- content -->
+        <div data-role="content" class="content_div">
+            <!-- thumbnails for all the pcitures in this album -->
+            <div class="thumbnails_div" data-role="content" data-position="fixed">
+                <a href="#"><img class="thumbnail" src="images/Animals/animals1.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Animals/animals2.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Animals/animals3.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Animals/animals4.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Animals/animals5.png" width="" height=""/></a>
+                <a href="#"><img class="thumbnail" src="images/Animals/animals6.png" width="" height=""/></a>
+            </div>
+            <!-- display big image for the clicked thumbnail - default to 1st image in the album -->
+            <div class="mainimage_div" data-role="content" data-position="fixed">
+                <img class="mainimage" src="images/Animals/Animals1.jpg" width="" height=""/>
             </div>
         </div>
-        <div class="panel" title="Practice" id="page_11" data-appbuilder-object="page"
-        style="" data-header="header_0">
-            <ul class="list" data-appbuilder-object="list" style="z-index: 0;">
-                <li><a href="#page_1">Position 1</a>
-                </li>
-                <li><a href="#page_2">Position 2</a>
-                </li>
-                <li><a href="#page_3">Position 3</a>
-                </li>
-            </ul>
+        
+           
+        <!-- footer -->
+        <div data-role="footer" data-id="tabnav-footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#birds" data-theme="b">Birds</a></li>
+                    <li><a href="#flowers" data-theme="b">Flowers</a></li>
+                    <li><a href="#animals" data-theme="b" class="ui-btn-active ui-state-persist">Animals</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="panel" title="Resources" id="page_12" data-appbuilder-object="page"
-        style="" data-header="header_0">
-
-
-
-            <div class="container" style="width: 100%; height: 100%; position: relative; z-index: 0;"
-            data-appbuilder-object="container">
-
-                <a class="button" href="http://software.intel.com/en-us/html5/tools" style="background-image: url(images/mandala-18609_150.jpg); background-size: 50px; height: 50px; width: 100%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
-                data-appbuilder-object="button" data-transition="slide">About Intel XDK</a>
-                <a class="button" href="http://software.intel.com/en-us/html5/videos/make-a-quick-and-attractive-ui-for-your-app"
-                style="background-image: url(images/mandala-18609_150.jpg); background-size: 50px; height: 50px; width: 100%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
-                data-appbuilder-object="button" data-transition="slide" id="">App Starter Video</a>
-                <a class="button" href="http://software.intel.com/en-us/html5/articles/xdkdocs"
-                style="background-image: url(images/mandala-18609_150.jpg); background-size: 50px; height: 50px; width: 100%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
-                data-appbuilder-object="button" data-transition="slide" id="">Documentation</a>
-                <div class="grid" data-appbuilder-object="grid13" style="">
-
-
+    </div>
+    
+    
+    
+    <!-- options toolbar button template (hide in unknown script tag type) -->
+    <script type="text/html" id="optionsBtnTmpl">
+        <a href="#" data-icon="gear" data-iconpos="notext" data-theme="b" class="ui-btn-right">Options</a>
+    </script>
+    
+    <!-- options menu template (hide in unknown script tag type) -->
+    <script type="text/html" id="optionsMenuTmpl">
+        <div class="optionsMenu" style="display:none"> 
+            <form id="myform" action="#" method="get">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" style="background: #CCCCCC; color: black;" data-mini="true">
+                        Background:
+                        <input type="radio" name="optionsname" id="option1"/>
+                            <label for="option1" style="background: #000000; color:white">Black</label>
+                        <input type="radio" name="optionsname" id="option2"/>
+                            <label for="option2" style="background: #C74277; color:white">Red</label>
+                        <input type="radio" name="optionsname" id="option3"/>
+                            <label for="option3" style="background: #70804E; color:white">Green</label>
+                        <input type="radio" name="optionsname" id="option4"/>
+                            <label for="option4" style="background: #6598E0; color:white">Blue</label>        
+                    </fieldset>
                 </div>
-            </div>
+            </form>
         </div>
-    </div>
-    <div id="navbar" class="footer"> <a href="#home" class="icon home">Home</a><a href="#page_10" class="icon info">About</a>
-        <a href="#page_11" class="icon star">Series</a><a href="#page_12" class="icon question">Resources</a>
-    </div>
-    <header id="header_0" data-appbuilder-object="header">
-        <h1 id="pageTitle" class="">Yoga App</h1>
-    </header>
+        
+    </script>
 
+    <script type="text/javascript">
+        $("#birds").die("pageinit");
+        $("#flowers").die("pageinit");
+        $("#animals").die("pageinit"); 
+    </script>
 
-
-    <footer id="footer_1" data-appbuilder-object="footer"><a href="#page_10" class="icon left">Previous</a><a href="#home" class="icon home">Home</a>
-        <a href="#page_2" class="icon right">Next</a>
-    </footer>
-    <footer id="footer_2" data-appbuilder-object="footer"><a href="#page_1" class="icon left">Previous</a><a href="#home" class="icon home">Home</a>
-        <a href="#page_3" class="icon right">Next</a>
-    </footer>
-    <footer id="footer_3" data-appbuilder-object="footer"><a href="#page_2" class="icon left">Previous</a><a href="#home" class="icon home">Home</a>
-        <a href="#page_12" class="icon right">Next</a>
-    </footer>
-</div>
-
-
+</body>
 
 </html>
