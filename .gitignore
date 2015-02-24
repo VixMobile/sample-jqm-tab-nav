@@ -1,0 +1,6 @@
+intelxdk.config.*.xml
+!intelxdk.config.additions.xml
+*.mobileprovision
+*.xdke
+[Tt]humbs.db
+.DS_Store

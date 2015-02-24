@@ -1,19 +1,26 @@
 jQuery Mobile Tab Nav
------------------------------
+=====================
+
+Copyright © 2012-2015, Intel Corporation. All rights reserved.
+
+See [LICENSE.md](<LICENSE.md>) for license terms and conditions.
+
 This sample is a multi-page jQuery Mobile scaffold using tab-based navigation.
-It also demonstrates how to create a custom options menu widget that maintains 
+It also demonstrates how to create a custom options menu widget that maintains
 state across page transitions, and how to dynamically inject widgets into the DOM.
 
+
 Intel(R) XDK
------------------------------
-This sample is part of the Intel(R) XDK tool. 
-Please sign up at http://software.intel.com/en-us/html5.
-To see the technical detail of the sample, please visit the sample article page at 
-http://software.intel.com/en-us/articles/jquery-mobile-tab-navigation
+------------
+This sample is part of the Intel XDK.
+Download the Intel XDK at <http://xdk.intel.com>.
+
+To see the technical detail of the sample, please visit the sample article page at
+<http://software.intel.com/en-us/articles/jquery-mobile-tab-navigation>
 
 
-License Information Follows
----------------------------
+Application Files
+-----------------
 * index.html
 * css/style.css
 * app/optionsWidget.js
@@ -27,59 +34,3 @@ License Information Follows
 * abstract.txt
 * app.json
 * screenshot.png
-* README.md
-
-Copyright (c) 2012, Intel Corporation
-
-Redistribution and use in source and binary forms, with or without modification, 
-are permitted provided that the following conditions are met:
-
-- Redistributions of source code must retain the above copyright notice, 
-  this list of conditions and the following disclaimer.
-
-- Redistributions in binary form must reproduce the above copyright notice, 
-  this list of conditions and the following disclaimer in the documentation 
-  and/or other materials provided with the distribution.
-
-- Neither the name of Intel Corporation nor the names of its contributors 
-  may be used to endorse or promote products derived from this software 
-  without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, 
-THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE 
-GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) 
-HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT 
-LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT 
-OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
-jQuery and jQuery Mobile
-------------------------
-* vendor/jquery/jquery-1.8.0.js
-* vendor/jquery/jquery-1.8.0.min.js
-* vendor/jquery.mobile/jquery.mobile-1.1.1.js
-* vendor/jquery.mobile/jquery.mobile-1.1.1.min.js 
-* vendor/jquery.mobile/jquery.mobile-1.1.1.css
-* vendor/jquery.mobile/jquery.mobile-1.1.1.min.css
-* vendor/jquery.mobile/images/ajax-loader.gif
-* vendor/jquery.mobile/images/ajax-loader.png
-* vendor/jquery.mobile/images/icons-18-black.png
-* vendor/jquery.mobile/images/icons-18-white.png
-* vendor/jquery.mobile/images/icons-36-black.png
-* vendor/jquery.mobile/images/icons-36-white.png
-
-Copyright (c) 2012, jQuery Foundation and other contributors.
-
-* source:  http://jquery.com/
-* source:  http://jquerymobile.com/
-* license: http://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
-
-IMAGES: *.png; images/*.png
-----------------------------------------------------------------------------
-all images are created by Intel Corp.
-they are licensed under the Creative Commons Attribution 3.0 license
-http://creativecommons.org/licenses/by/3.0/us/

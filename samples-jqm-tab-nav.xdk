@@ -2,14 +2,14 @@
   "project": {
     "projectSettingsVersion": "1.2",
     "creationData": {
-      "type": "Demo",
-      "createDefaultBuildConfigs": true,
-			"projectTypeName": "com.intel.xdk.projecttype.webapp",
-      "src": "https://edge-intel.s3.amazonaws.com/samples/production/sample-jqm-tab-nav/sample.zip",
-      "sourceDirectory": "www",
-			"projectGuid": "00000000-0000-0000-0000-000000000000",
-      "lastModifiedDate": 1407964615123,
-      "creationDate": 1407962783115
+        "type": "Demo",
+        "createDefaultBuildConfigs": true,
+        "projectTypeName": "com.intel.xdk.projecttype.webapp",
+        "src": "https://edge-intel.s3.amazonaws.com/samples/production/sample-jqm-tab-nav/sample.zip",
+        "sourceDirectory": "www",
+        "projectGuid": "00000000-0000-0000-0000-000000000000",
+        "lastModifiedDate": 1407964615123,
+        "creationDate": 1407962783115
     },
     "sourceDirectory": "www",
     "cordovaPluginsDirectory": "plugins",
@@ -105,24 +105,6 @@
         "appVersion_": "0.0.0.1",
         "runtime_": "Cordova 3.x",
         "appDescription_": "A multi-page jQuery Mobile scaffold using tab-based navigation. It also demonstrates how to create a custom options menu widget that maintains state across page transitions; and how to dynamically inject widgets into the DOM."
-      },
-      "WindowsPhone8": {
-        "platform_": "wp8",
-        "name_": "WindowsPhone8",
-        "preferences_": {},
-        "isActive_": true,
-        "appName_": "JQMTabNav",
-        "appID_": "not.yet.specified",
-        "appAccess_": "*",
-        "icons_": [],
-        "splashes_": [],
-        "iosProvs_": [],
-        "addlPermissions_": "",
-        "excludedLibraries_": "",
-				"cordovaCLIVersion_": "?",
-        "crosswalkVersion_": "?",
-        "appVersion_": "1.0.0.0",
-        "runtime_": "Cordova 3.x"
       }
     }
   }
