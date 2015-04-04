@@ -1,16 +1,22 @@
 {
-"repoName":"sample-jqm-tab-nav",
-"title":"jQM Tab Nav",
-"tooltip":"jQuery Mobile scaffold using tab-based navigation",
-"description":"A multi-page jQuery Mobile scaffold using tab-based navigation. It also demonstrates how to create a custom options menu widget that maintains state across page transitions; and how to dynamically inject widgets into the DOM.",
-"highlights":["jQuery"],
-"apppreview":"true",
-"appname":"demo.jqmtabnavnew",
-"articleUrl":"http://software.intel.com/en-us/articles/jquery-mobile-tab-navigation",
-"keywords":["jQuery"],
-"iconUrl":"https://github.com/gomobile/sample-jqm-tab-nav/blob/master/icon.png",
-"screenshotUrl":"https://github.com/gomobile/sample-jqm-tab-nav/blob/master/screenshot.png",
-"visible" : "true",
-"zipUrl":"",
-"projectTypeName": "com.intel.xdk.projecttype.webapp"
+   "appPreview" : true,
+   "repoName" : "sample-jqm-tab-nav",
+   "articleUrl" : "http://software.intel.com/en-us/articles/jquery-mobile-tab-navigation",
+   "highlights" : [
+      "jQuery"
+   ],
+   "projectTypeName" : "com.intel.xdk.projecttype.webapp",
+   "mobile" : false,
+   "zipUrl" : "",
+   "tooltip" : "jQuery Mobile scaffold using tab-based navigation",
+   "appName" : "demo.jqmtabnavnew",
+   "iconUrl" : "https://github.com/gomobile/sample-jqm-tab-nav/blob/master/icon.png",
+   "title" : "jQM Tab Nav",
+   "description" : "A multi-page jQuery Mobile scaffold using tab-based navigation. It also demonstrates how to create a custom options menu widget that maintains state across page transitions; and how to dynamically inject widgets into the DOM.",
+   "relName" : null,
+   "keywords" : [
+      "jQuery"
+   ],
+   "visible" : true,
+   "screenshotUrl" : "https://github.com/gomobile/sample-jqm-tab-nav/blob/master/screenshot.png"
 }
