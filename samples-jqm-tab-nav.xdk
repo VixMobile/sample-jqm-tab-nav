@@ -73,7 +73,7 @@
          "runtime_": "W3C on Cordova",
         "name_": "iOS",
         "preferences_": {
-         "ios-target": "6",
+         "ios-target": "6"
         },
          "isActive_": true,
         "appName_": "JQMTabNav",
